@@ -1,0 +1,8 @@
+C:\Users\c9410\OneDrive\Документы\CinemaVR.Api\obj\Debug\net10.0\CinemaVR.Api.csproj.AssemblyReference.cache
+C:\Users\c9410\OneDrive\Документы\CinemaVR.Api\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\c9410\OneDrive\Документы\CinemaVR.Api\obj\Debug\net10.0\CinemaVR.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\c9410\OneDrive\Документы\CinemaVR.Api\obj\Debug\net10.0\CinemaVR.Api.AssemblyInfoInputs.cache
+C:\Users\c9410\OneDrive\Документы\CinemaVR.Api\obj\Debug\net10.0\CinemaVR.Api.AssemblyInfo.cs
+C:\Users\c9410\OneDrive\Документы\CinemaVR.Api\obj\Debug\net10.0\CinemaVR.Api.csproj.CoreCompileInputs.cache
+C:\Users\c9410\OneDrive\Документы\CinemaVR.Api\obj\Debug\net10.0\CinemaVR.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\c9410\OneDrive\Документы\CinemaVR.Api\obj\Debug\net10.0\CinemaVR.Api.MvcApplicationPartsAssemblyInfo.cache
