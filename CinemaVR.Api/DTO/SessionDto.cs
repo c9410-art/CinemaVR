@@ -1,8 +1,17 @@
-namespace CinemaVR.Api.DTO;
+using System.ComponentModel.DataAnnotations;
 
-public class SessionDto
+namespace CinemaVR.Api.DTO
 {
-    public int FilmId { get; set; }
-    public DateTime Date { get; set; }
-    public string Hall { get; set; } = "";
+    public class SessionDto
+    {
+        [Required]
+        public int FilmId { get; set; }
+
+        [Required]
+        public DateTime Date { get; set; }
+
+        [Required]
+        [StringLength(30)]
+        public string Hall { get; set; } = "";
+    }
 }

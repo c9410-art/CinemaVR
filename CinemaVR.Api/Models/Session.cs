@@ -6,4 +6,6 @@ public class Session
     public int FilmId { get; set; }
     public DateTime Date { get; set; }
     public string Hall { get; set; } = "";
+    public Film Film { get; set; } = null!;
+    public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
 }

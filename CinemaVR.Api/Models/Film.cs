@@ -7,4 +7,5 @@ public class Film
     public decimal Price { get; set; }
     public string Genre { get; set; } = "";
     public int Year { get; set; }
+    public ICollection<Session> Sessions { get; set; } = new List<Session>();
 }

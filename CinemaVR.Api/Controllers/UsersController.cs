@@ -2,32 +2,39 @@ using Microsoft.AspNetCore.Mvc;
 using CinemaVR.Api.Models;
 using CinemaVR.Api.DTO;
 
-namespace CinemaVR.Api.Controllers;
-
-[ApiController]
-[Route("api/[controller]")]
-public class UsersController : ControllerBase
+namespace CinemaVR.Api.Controllers
 {
-    private static List<User> Users = new();
-
-    [HttpPost("register")]
-    public IActionResult Register(UserRegisterDto dto)
+    [ApiController]
+    [Route("api/[controller]")]
+    public class UsersController : ControllerBase
     {
-        var user = new User
+        private static readonly List<User> _users = new();
+
+        // POST: api/users/register
+        [HttpPost("register")]
+        public ActionResult<User> Register([FromBody] UserRegisterDto dto)
         {
-            Id = Users.Count + 1,
-            Email = dto.Email,
-            FullName = dto.FullName
-        };
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-        Users.Add(user);
-        return Created($"api/users/{user.Id}", user);
-    }
+            var user = new User
+            {
+                Id = _users.Count == 0 ? 1 : _users.Max(u => u.Id) + 1,
+                Email = dto.Email,
+                FullName = dto.FullName
+            };
 
-    [HttpGet("{id}")]
-    public IActionResult Get(int id)
-    {
-        var user = Users.FirstOrDefault(u => u.Id == id);
-        return user == null ? NotFound() : Ok(user);
+            _users.Add(user);
+
+            return CreatedAtAction(nameof(GetById), new { id = user.Id }, user);
+        }
+
+        // GET: api/users/5
+        [HttpGet("{id}")]
+        public ActionResult<User> GetById(int id)
+        {
+            var user = _users.FirstOrDefault(u => u.Id == id);
+            return user == null ? NotFound() : Ok(user);
+        }
     }
 }

@@ -1,0 +1,24 @@
+# Visual Studio / Core build outputs
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+b囊in/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.useruser
+*.userosscache
+*.sln.docstates
+
+# Visual Studio 2015/2017/2019/2022 cache directory
+.vs/
+
+# Visual Studio Code items
+.vscode/
+
+# Rider / JetBrains
+.idea/

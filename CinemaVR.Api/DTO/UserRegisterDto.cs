@@ -1,7 +1,15 @@
-namespace CinemaVR.Api.DTO;
+using System.ComponentModel.DataAnnotations;
 
-public class UserRegisterDto
+namespace CinemaVR.Api.DTO
 {
-    public string Email { get; set; } = "";
-    public string FullName { get; set; } = "";
+    public class UserRegisterDto
+    {
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; } = "";
+
+        [Required]
+        [StringLength(100)]
+        public string FullName { get; set; } = "";
+    }
 }

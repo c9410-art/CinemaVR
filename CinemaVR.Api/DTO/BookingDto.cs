@@ -1,8 +1,17 @@
-namespace CinemaVR.Api.DTO;
+using System.ComponentModel.DataAnnotations;
 
-public class BookingDto
+namespace CinemaVR.Api.DTO
 {
-    public int SessionId { get; set; }
-    public int UserId { get; set; }
-    public string Seat { get; set; } = "";
+    public class BookingDto
+    {
+        [Required]
+        public int SessionId { get; set; }
+
+        [Required]
+        public int UserId { get; set; }
+
+        [Required]
+        [StringLength(5, ErrorMessage = "Seat must be like A5, B10, etc.")]
+        public string Seat { get; set; } = "";
+    }
 }

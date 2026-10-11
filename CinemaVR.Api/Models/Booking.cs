@@ -7,4 +7,6 @@ public class Booking
     public int UserId { get; set; }
     public string Seat { get; set; } = "";
     public decimal Price { get; set; }
+    public Session Session { get; set; } = null!;
+    public User User { get; set; } = null!;
 }
